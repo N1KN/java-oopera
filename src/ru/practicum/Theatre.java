@@ -12,13 +12,13 @@ public class Theatre {
         Director director2 = new Director("Анна", "Фёдорова", Gender.FEMALE, 7);
 
         // Автор музыки и хореограф — строки, хранятся в полях спектаклей
-        String musicAuthor = "Пётр Чайковский";
-        String choreographer = "Игорь Моисеев";
+        Person musicAuthor = new Person("Пётр", "Чайковский", Gender.MALE);
+        Person choreographer = new Person("Игорь", "Моисеев", Gender.MALE);
 
         // Создаём три спектакля: обычный, опера и балет
-        Show regularShow = new Show("Вишнёвый сад", director1);
-        Opera opera = new Opera("Евгений Онегин", director1, musicAuthor, "Либретто оперы: Онегин встречает Татьяну...", 30);
-        Ballet ballet = new Ballet("Лебединое озеро", director2, musicAuthor, "Либретто балета: Принц Зигфрид встречает лебедей...", choreographer);
+        Show regularShow = new Show("Вишнёвый сад", director1, 180);
+        Opera opera = new Opera("Евгений Онегин", director1, 210, musicAuthor, "Либретто оперы: Онегин встречает Татьяну...", 30);
+        Ballet ballet = new Ballet("Лебединое озеро", director2, 163, musicAuthor, "Либретто балета: Принц Зигфрид встречает лебедей...", choreographer);
 
         // Распределяем актёров по спектаклям
         System.out.println("Добавляем актёров");

@@ -5,17 +5,21 @@ import java.util.ArrayList;
 public class Show {
     private String title;
     private Director director;
+    // Длительность в минутах
+    private int duration;
     final ArrayList<Actor> listOfActors;
 
-    public Show(String title, Director director, ArrayList<Actor> listOfActors) {
+    public Show(String title, Director director, int duration, ArrayList<Actor> listOfActors) {
         this.title = title;
         this.director = director;
+        this.duration = duration;
         this.listOfActors = listOfActors;
     }
 
-    public Show(String title, Director director) {
+    public Show(String title, Director director, int duration) {
         this.title = title;
         this.director = director;
+        this.duration = duration;
         this.listOfActors = new ArrayList<Actor>();
     }
 
@@ -70,4 +74,11 @@ public class Show {
         this.director = director;
     }
 
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
 }

@@ -3,17 +3,17 @@ package ru.practicum;
 import java.util.ArrayList;
 
 public class MusicalShow extends Show {
-    String musicAuthor;
-    String librettoText;
+    protected Person musicAuthor;
+    protected String librettoText;
 
-    public MusicalShow(String title, Director director, ArrayList<Actor> listOfActors, String musicAuthor, String librettoText) {
-        super(title, director, listOfActors);
+    public MusicalShow(String title, Director director, int duration, ArrayList<Actor> listOfActors, Person musicAuthor, String librettoText) {
+        super(title, director, duration, listOfActors);
         this.musicAuthor = musicAuthor;
         this.librettoText = librettoText;
     }
 
-    public MusicalShow(String title, Director director, String musicAuthor, String librettoText) {
-        super(title, director);
+    public MusicalShow(String title, Director director, int duration, Person musicAuthor, String librettoText) {
+        super(title, director, duration);
         this.musicAuthor = musicAuthor;
         this.librettoText = librettoText;
     }

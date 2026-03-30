@@ -3,23 +3,23 @@ package ru.practicum;
 import java.util.ArrayList;
 
 public class Ballet extends MusicalShow {
-    private String choreographer;
+    private Person choreographer;
 
-    public Ballet(String title, Director director, ArrayList<Actor> listOfActors, String musicAuthor, String librettoText, String choreographer) {
-        super(title, director, listOfActors, musicAuthor, librettoText);
+    public Ballet(String title, Director director, int duration, ArrayList<Actor> listOfActors, Person musicAuthor, String librettoText, Person choreographer) {
+        super(title, director, duration, listOfActors, musicAuthor, librettoText);
         this.choreographer = choreographer;
     }
 
-    public Ballet(String title, Director director, String musicAuthor, String librettoText, String choreographer) {
-        super(title, director, musicAuthor, librettoText);
+    public Ballet(String title, Director director, int duration, Person musicAuthor, String librettoText, Person choreographer) {
+        super(title, director, duration, musicAuthor, librettoText);
         this.choreographer = choreographer;
     }
 
-    public String getChoreographer() {
+    public Person getChoreographer() {
         return choreographer;
     }
 
-    public void setChoreographer(String choreographer) {
+    public void setChoreographer(Person choreographer) {
         this.choreographer = choreographer;
     }
 }
