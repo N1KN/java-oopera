@@ -43,6 +43,16 @@ public class Show {
         this.listOfActors.add(actor);
     }
 
+    public void replaceActor(Actor newActor, String surname) {
+        for (int i = 0; i < listOfActors.size(); i++) {
+            if (listOfActors.get(i).getSurname().equals(surname)) {
+                listOfActors.set(i, newActor);
+                return;
+            }
+        }
+        System.out.println("Актёр с фамилией " + surname + " не найден в списке этой постановки.");
+    }
+
     // Setters and getters
     public String getTitle() {
         return this.title;
